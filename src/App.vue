@@ -1,9 +1,9 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+  <div class="justify-center flex bg-white items-center h-screen">
+    <div class="text-4xl">
+      <img src="https://res.cloudinary.com/dw21mdxqj/image/upload/v1634277410/elementos_de_marca_sr-05_ojwejv.png" alt="" class="w-60">
+    </div>
   </div>
-  <router-view />
 </template>
 
 <style>
