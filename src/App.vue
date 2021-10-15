@@ -1,5 +1,5 @@
-<template>
-  <div class="justify-center flex bg-white items-center h-screen">
+<template >
+  <div class="justify-center flex flex-col bg-white items-center h-screen">
     <div class="text-4xl">
       <img src="https://res.cloudinary.com/dw21mdxqj/image/upload/v1634277410/elementos_de_marca_sr-05_ojwejv.png" alt="" class="w-60">
     </div>
