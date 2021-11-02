@@ -1,23 +1,26 @@
 import { createRouter, createWebHashHistory } from "vue-router";
-import Home from "../views/Home.vue";
+import Home from "../views/Inicio.vue";
+import Precios from "../views/Precios.vue";
 
 const routes = [
   {
     path: "/",
-    name: "Home",
+    name: "",
     component: Home,
   },
   {
-    path: "/about",
-    name: "About",
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/About.vue"),
-  },
+    path: "/precios", 
+    name: "precios",
+    component: Precios,
+  }
 ];
+
+
 
 const router = createRouter({
   history: createWebHashHistory(),
   routes,
+  mode: 'history' // Eliminar el signo #
 });
 
 export default router;
