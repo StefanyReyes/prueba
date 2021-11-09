@@ -1,3 +1,5 @@
+@import './precios.scss';
+
 .main-inicio{
     @apply flex;
     @apply flex-col;
@@ -20,68 +22,111 @@
             @apply absolute;
             top: 0;
             left: 0;
-            height: 350px;
-            opacity: 0.05;
-            @apply z-30;
+            @apply h-96;
+            opacity: 0.1;
+            @apply z-10;
+
+            @media (min-width: 768px) {
+                height: 350px;
+            }
+
+            @media (min-width: 1024px) {
+                height: 450px;
+            }
+
         }
+
+
+
         .cinta1 img{
             @apply absolute;
             bottom: 0;
             left: 0;
-            height: 250px;
+            @apply h-64;
             @apply z-40;
         }
         .cinta2 img{
             @apply absolute;
             top: 0;
             right: 0;
-            height: 250px;
+            @apply h-64;
             @apply z-50;
         }
 
         .contenido{
-            @apply p-8;
-            @apply w-full;
             @apply grid;
-            grid-template-columns: 2fr 3fr;
+            @apply p-4;
+            @apply w-full;
+            @apply grid-cols-1;
             @apply items-center;
 
+            @media (min-width: 1024px) {
+                grid-template-columns: 40% 60%;
+            }
+
             .multimedia{
+                @apply hidden;
                 @apply p-8;
                 width: 100%;
-                @apply flex;
+                @apply lg:flex;
                 @apply justify-center;
-                & img {
-                    @apply relative;
+                @apply relative;
+                & .martillo {
+                    @apply absolute;
+                    @apply animate-bounce;
                     @apply z-50;
-                    max-height: 100%; 
+                    max-height: 200px; 
+             }
+
+             .muela{
+                @apply z-20;
+                 & img{
+                    max-height: 480px; 
+                 }
              }
             }
 
             
 
             .informacion{
-                @apply p-8;
                 width: 100%;
                 @apply flex;
                 @apply flex-col;
                 @apply items-center;
                 @apply justify-center;
 
-                p{
-                    font-weight: 600;
-                    font-size: 75px;
+                @media (min-width: 640px) {
+                    @apply p-8;
                 }
+
+                p{
+                    line-height: 1;
+                    text-align: center;
+                    font-weight: 600;
+                    font-size: 35px;
+
+                    @media (min-width: 640px) {
+                        font-size: 68px;
+                    }
+                }
+
+                
 
                 h2{
                     font-weight: 300;
-                    font-size: 25px;
-                    margin-top: -25px;
+                    font-size: 18px;
+                    @media (min-width: 640px) {
+                        font-size: 25px;
+                    }
                 }
 
                 .logo img{
-                    max-height: 80px;
-                    @apply mb-16;  
+                    max-height: 70px;
+                    @apply mb-16;
+                    
+                    @media (min-width: 640px) {
+                        max-height: 100px;
+                    }
                 }
 
                 .info-precios{
@@ -129,7 +174,7 @@
 
                     span{
                         font-size: 40px;
-                        font-weight: 500;
+                        font-weight: 600;
                         @apply mb-10;
                     }
         

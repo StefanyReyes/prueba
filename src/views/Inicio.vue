@@ -12,7 +12,10 @@
         </div>
             <div class="contenido">
                 <div class="multimedia">
-                    <img src="https://res.cloudinary.com/dw21mdxqj/image/upload/v1635932421/hammer_hsia9q.png" alt="Construcción">
+                    <img class="martillo" src="https://res.cloudinary.com/dw21mdxqj/image/upload/v1635932421/hammer_hsia9q.png" alt="Construcción">
+                    <div class="muela">
+                        <img src="https://res.cloudinary.com/dw21mdxqj/image/upload/v1635972756/gif-_oqpnvr.gif" alt="">
+                    </div>
             </div>
             <div class="informacion">
                     <div class="logo">
@@ -23,10 +26,10 @@
                         <div class="info-precios">
                         <input v-model="nombre" placeholder="Ingresa tu nombre" class="nombre">
                          <p class="bienvenido">Bienvendo/a a Stefany Reyes</p>
-                        <span>{{nombre}}</span>
+                        <span>Dr. {{nombre}}</span>
                         <div class="campo">
-                            <p>Conoce nuestros precios</p>
-                            <router-link to="/precios" class=" precios"><svg class="w-6 h-6 " fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>Ver precios</router-link>
+                            <p >Conoce nuestro brochure de precios</p>
+                            <router-link @click="guardarNombre" to="/precios" class=" precios"><svg class="w-6 h-6 " fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>Ver precios</router-link>
                         </div>
                         
                     </div>
@@ -49,6 +52,13 @@ export default {
                 nombre:"",
             }
         },
+
+        methods: {
+            guardarNombre(){
+                this.$store.commit("guardarNombre", this.nombre)
+            }
+        },
+
 }
 </script>
 
