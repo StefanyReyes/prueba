@@ -22,7 +22,7 @@
                         <img src="https://res.cloudinary.com/dw21mdxqj/image/upload/v1635919241/elementos_de_marca_sr-05_mjayqu.png" alt="Logo">
                     </div>
                     <p>En construcción</p>
-                    <h2>La magía está por suceder</h2>
+                    <h2>La magía está por suceder :c</h2>
                         <div class="info-precios">
                         <input v-model="nombre" placeholder="Ingresa tu nombre" class="nombre">
                          <p class="bienvenido">Bienvendo/a a Stefany Reyes</p>
